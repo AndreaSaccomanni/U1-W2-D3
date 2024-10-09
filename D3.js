@@ -169,18 +169,16 @@ console.log(eyeColor);
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
-const crewMassArr = [];
+
 let crewMass = 0;
 i = 0;
 while (i < starWarsCharacters.length) {
-  const starWarsCharactersObj = starWarsCharacters[i];
-  crewMassArr.push(starWarsCharactersObj.mass);
+  crewMass += crewMassArr[i].mass;
   i++;
 }
-//console.log(crewMassArr);
-for (let i = 0; i < crewMassArr.length; i++) {
+/*for (let i = 0; i < crewMassArr.length; i++) {
   crewMass += crewMassArr[i];
-}
+}*/
 console.log("La massa totale dell equipaggio è: ", crewMass, "kg");
 /* ESERCIZIO 7
   Crea uno if/else statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'ipotetica astronave contenente i personaggi dell'array "starWarsCharacters".
@@ -211,17 +209,18 @@ if (crewMass >= 1000) {
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
-/*i = 0;
-let starWarsCharactersObj = starWarsCharacters[i];
-let newGender = "robot";
+console.log(starWarsCharacters[i]);
+
 for (let i = 0; i < starWarsCharacters.length; i++) {
+  let starWarsCharactersObj = starWarsCharacters[i];
   if (starWarsCharactersObj.gender === "n/a") {
-    newGender = "robot";
+    let newGender = "robot";
     starWarsCharactersObj.gender = newGender;
   }
 }
 console.log(starWarsCharactersObj);
-console.log(starWarsCharactersObj.gender);*/
+console.log(starWarsCharactersObj.gender);
+
 console.log(starWarsCharacters[i].gender);
 for (let i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender === "n/a") {
@@ -238,9 +237,3 @@ Una volta fatto crea un console.log per controllare la proprietà length di "cha
 /* --EXTRA-- ESERCIZIO 10
 Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
-
-/*newGender = "robot";
-switch (starWarsCharactersObj.gender) {
-  case "n/a":
-    starWarsCharactersObj.gender = "Robot";
-  }*/
